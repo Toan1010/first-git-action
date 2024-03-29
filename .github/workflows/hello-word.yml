@@ -3,7 +3,7 @@ on:
   push: 
     branches: ['main']
 jobs: 
-  - say hi:
+  say hi:
     runs-on: ubuntu-latest
     steps: 
       - run : echo xin chao cac ban lan 2 
