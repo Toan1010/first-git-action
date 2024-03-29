@@ -3,7 +3,12 @@ on:
   push: 
     branches: ['main']
 jobs: 
-  say-hi:
+  - newday:
     runs-on: ubuntu-latest
     steps: 
-      - run : echo xin chao cac ban lan 2 
+      - run : echo "TODAY = $(date +%Y-%m-%d)" >> $GITHUB_ENV
+      - run : echo Hello World and today is $TODAY
+  - say-hi:
+    runs-on: ubuntu-latest
+    steps: 
+      - run : echo Hello World and my name is Toan
